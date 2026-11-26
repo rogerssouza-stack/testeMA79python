@@ -1,0 +1,182 @@
+/* Variáveis com a Paleta Oficial WEG */
+:root {
+    --weg-azul: #00579D;
+    --weg-azul-escuro: #003B6F;
+    --weg-azul-vibrante: #0077C8;
+    --weg-azul-suave: #E6F0F8;
+    --fundo-pagina: #F2F5F8;
+    --borda-sutil: #D6E0E9;
+    --texto-escuro: #1A2530;
+    --texto-medio: #4A5568;
+    --branco: #FFFFFF;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Segoe UI', Roboto, Helvetica, Arial, sans-serif;
+    background-color: var(--fundo-pagina);
+    color: var(--texto-escuro);
+    line-height: 1.6;
+}
+
+.container {
+    max-width: 980px;
+    margin: 0 auto;
+    padding: 0 20px;
+}
+
+/* Cabeçalho Institucional */
+.topo {
+    background: linear-gradient(135deg, var(--weg-azul-escuro) 0%, var(--weg-azul) 100%);
+    color: var(--branco);
+    padding: 48px 0;
+    border-bottom: 5px solid var(--weg-azul-vibrante);
+}
+
+.etiqueta-local {
+    display: inline-block;
+    background-color: rgba(255, 255, 255, 0.14);
+    border: 1px solid rgba(255, 255, 255, 0.35);
+    padding: 6px 14px;
+    border-radius: 4px;
+    font-size: 0.85rem;
+    font-weight: 600;
+    letter-spacing: 0.6px;
+    text-transform: uppercase;
+    margin-bottom: 14px;
+}
+
+.topo h1 {
+    font-size: 2.1rem;
+    font-weight: 700;
+    margin-bottom: 10px;
+}
+
+.descricao-topo {
+    font-size: 1.08rem;
+    color: #DCE8F2;
+    max-width: 760px;
+}
+
+/* Blocos Principais */
+main {
+    padding: 36px 20px;
+}
+
+.bloco {
+    background-color: var(--branco);
+    border: 1px solid var(--borda-sutil);
+    border-radius: 8px;
+    padding: 30px;
+    margin-bottom: 24px;
+    box-shadow: 0 2px 8px rgba(0, 59, 111, 0.05);
+}
+
+.destaque-institucional {
+    border-left: 6px solid var(--weg-azul);
+}
+
+.bloco h2 {
+    color: var(--weg-azul);
+    font-size: 1.45rem;
+    margin-bottom: 16px;
+    padding-bottom: 8px;
+    border-bottom: 2px solid var(--weg-azul-suave);
+}
+
+.bloco p {
+    color: var(--texto-medio);
+    margin-bottom: 14px;
+}
+
+.bloco p:last-child {
+    margin-bottom: 0;
+}
+
+/* Grade de Cartões das Funções */
+.grade-explicacao {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+    gap: 18px;
+    margin-top: 20px;
+}
+
+.cartao-funcao {
+    background-color: var(--fundo-pagina);
+    border: 1px solid var(--borda-sutil);
+    border-top: 3px solid var(--weg-azul);
+    border-radius: 6px;
+    padding: 18px;
+}
+
+.cartao-funcao h3 {
+    color: var(--weg-azul-escuro);
+    font-size: 1.05rem;
+    margin-bottom: 8px;
+}
+
+.cartao-funcao p {
+    font-size: 0.94rem;
+    margin-bottom: 0;
+}
+
+/* Estilização de Código */
+code {
+    background-color: var(--weg-azul-suave);
+    color: var(--weg-azul-escuro);
+    padding: 2px 6px;
+    border-radius: 4px;
+    font-family: 'Consolas', 'Courier New', monospace;
+    font-size: 0.9em;
+}
+
+pre {
+    background-color: #0F172A;
+    color: #F1F5F9;
+    padding: 20px;
+    border-radius: 6px;
+    overflow-x: auto;
+    margin-top: 12px;
+    border-left: 4px solid var(--weg-azul-vibrante);
+}
+
+pre code {
+    background-color: transparent;
+    color: inherit;
+    padding: 0;
+    font-size: 0.95rem;
+}
+
+/* Rodapé */
+.rodape {
+    background-color: var(--weg-azul-escuro);
+    color: var(--branco);
+    text-align: center;
+    padding: 24px 0;
+    margin-top: 16px;
+}
+
+.rodape p {
+    margin-bottom: 4px;
+}
+
+.rodape span {
+    font-size: 0.85rem;
+    color: #B0C8DF;
+}
+
+/* Ajuste para telas de celular */
+@media (max-width: 600px) {
+    .topo h1 {
+        font-size: 1.65rem;
+    }
+
+    .bloco {
+        padding: 20px;
+    }
+}

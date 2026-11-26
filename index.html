@@ -1,0 +1,119 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Cadastro de Motores em Python | CentroWEG - SENAI</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    <header class="topo">
+        <div class="container">
+            <span class="etiqueta-local">CentroWEG • SENAI | Jaraguá do Sul - SC</span>
+            <h1>Sistema de Cadastro de Motores em Python</h1>
+            <p class="descricao-topo">
+                Documentação técnica de uma aplicação monolítica em memória desenvolvida com foco em lógica estruturada, funções e manipulação de arrays (listas).
+            </p>
+        </div>
+    </header>
+
+    <main class="container">
+        <!-- Contexto do Projeto -->
+        <section class="bloco destaque-institucional">
+            <h2>Onde foi desenvolvido</h2>
+            <p>
+                Este projeto foi criado durante as aulas de programação no <strong>CentroWEG</strong>, 
+                o centro de formação técnica do <strong>SENAI</strong> localizado dentro do complexo industrial da <strong>WEG</strong>, 
+                em <strong>Jaraguá do Sul, Santa Catarina</strong>.
+            </p>
+            <p>
+                A proposta simula o gerenciamento de catálogo técnico de motores elétricos (como potência em CV, tensão nominal, rotação e modelo) 
+                utilizando exclusivamente recursos nativos do Python, sem necessidade de banco de dados externo.
+            </p>
+        </section>
+
+        <!-- Explicação do Código Python -->
+        <section class="bloco">
+            <h2>Como o Código Python Funciona</h2>
+            <p>
+                Toda a aplicação foi escrita em um único arquivo (arquitetura monolítica) para facilitar a execução e os testes em terminal. 
+                Abaixo está o papel de cada estrutura do script:
+            </p>
+
+            <div class="grade-explicacao">
+                <article class="cartao-funcao">
+                    <h3>Array Principal (<code>motores = []</code>)</h3>
+                    <p>
+                        Funciona como o armazenamento temporário em memória RAM. Cada posição do array guarda um dicionário 
+                        representando um motor com ID, modelo, fabricante, potência, tensão, RPM e tipo.
+                    </p>
+                </article>
+
+                <article class="cartao-funcao">
+                    <h3><code>cadastrar_motor()</code></h3>
+                    <p>
+                        Solicita os dados ao usuário via terminal, valida valores numéricos com blocos <code>try/except</code> 
+                        para evitar falhas de digitação e gera um ID sequencial automático.
+                    </p>
+                </article>
+
+                <article class="cartao-funcao">
+                    <h3><code>listar_motores()</code> e <code>buscar_motor()</code></h3>
+                    <p>
+                        Percorre o array exibindo os dados formatados em tabela no console ou filtra registros específicos 
+                        pelo número de ID ou por parte do nome do modelo.
+                    </p>
+                </article>
+
+                <article class="cartao-funcao">
+                    <h3><code>atualizar_motor()</code> e <code>excluir_motor()</code></h3>
+                    <p>
+                        Permite alterar especificações de um motor existente (mantendo os dados originais caso o usuário pressione Enter) 
+                        ou remover o item do array após confirmação.
+                    </p>
+                </article>
+
+                <article class="cartao-funcao">
+                    <h3><code>popular_dados_teste()</code></h3>
+                    <p>
+                        Insere automaticamente motores de exemplo (incluindo linhas industriais como <em>W22 IR3 Premium</em> e <em>W21</em>) 
+                        ao iniciar o script para agilizar a validação das funções.
+                    </p>
+                </article>
+
+                <article class="cartao-funcao">
+                    <h3>Menu Interativo (<code>while True</code>)</h3>
+                    <p>
+                        Mantém o programa em execução contínua exibindo as opções numéricas no terminal até que o operador 
+                        escolha a opção <code>0</code> para encerrar.
+                    </p>
+                </article>
+            </div>
+        </section>
+
+        <!-- Exemplo Visual do Objeto em Memória -->
+        <section class="bloco">
+            <h2>Exemplo de Registro no Array</h2>
+            <p>Cada motor cadastrado ocupa uma posição na lista seguindo esta estrutura de chaves e valores:</p>
+            <pre><code>{
+    "id": 1,
+    "modelo": "W22 IR3 Premium",
+    "fabricante": "WEG",
+    "potencia_cv": 5.0,
+    "tensao_v": 380,
+    "rpm": 1750,
+    "tipo": "Trifásico"
+}</code></pre>
+        </section>
+    </main>
+
+    <footer class="rodape">
+        <div class="container">
+            <p><strong>CentroWEG • SENAI</strong> — Jaraguá do Sul, SC</p>
+            <span>Projeto de Lógica de Programação e Python</span>
+        </div>
+    </footer>
+
+</body>
+</html>
